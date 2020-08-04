@@ -13,6 +13,13 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": [
+              "@firebase/app",
+              "firebase/app",
+              "@firebase/firestore",
+              "@firebase/component",
+              "@firebase/util"
+            ],
             "outputPath": "dist/angular-todo",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -24,6 +31,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
